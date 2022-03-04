@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.11;
 
 import "ds-test/test.sol";
@@ -6,10 +6,7 @@ import "ds-test/test.sol";
 import "./Claims.sol";
 
 contract ClaimsTest is DSTest {
-    Claims claims;
-
     function setUp() public {
-        claims = new Claims();
     }
 
     function testFail_basic_sanity() public {

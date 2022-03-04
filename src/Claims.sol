@@ -1,27 +1,23 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.11;
 
-import "openzeppelin-solidity/utils/Context.sol";
-import "openzeppelin-solidity/access/AccessControl.sol";
+import "openzeppelin-solidity/contracts/access/AccessControl.sol";
 import "./ClaimERC1155ERC721ERC20.sol";
 
 /// @title A Multi Claim contract that enables claims of user rewards in the form of ERC1155, ERC721 and / or ERC20 tokens
 /// @notice This contract manages claims for multiple token types
-/// @dev The contract implements ERC2771 to ensure that users do not pay gas
 contract Claims is AccessControl, ClaimERC1155ERC721ERC20 {
     bytes4 private constant ERC1155_RECEIVED = 0xf23a6e61;
     bytes4 private constant ERC1155_BATCH_RECEIVED = 0xbc197c81;
-    bytes4 internal constant ERC721_RECEIVED = 0x150b7a02;
-    bytes4 internal constant ERC721_BATCH_RECEIVED = 0x4b808c46;
+    bytes4 private constant ERC721_RECEIVED = 0x150b7a02;
 
     mapping(address => mapping(bytes32 => bool)) public claimed;
     mapping(bytes32 => uint256) internal _expiryTime;
 
     event NewGiveaway(bytes32 merkleRoot, uint256 expiryTime);
 
-    constructor(address admin, address trustedForwarder) {
+    constructor(address admin) {
         _setupRole(DEFAULT_ADMIN_ROLE, admin);
-        __ERC2771Handler_initialize(trustedForwarder);
     }
 
     /// @notice Function to add a new giveaway.
@@ -30,12 +26,6 @@ contract Claims is AccessControl, ClaimERC1155ERC721ERC20 {
     function addNewGiveaway(bytes32 merkleRoot, uint256 expiryTime) external onlyRole(DEFAULT_ADMIN_ROLE) {
         _expiryTime[merkleRoot] = expiryTime;
         emit NewGiveaway(merkleRoot, expiryTime);
-    }
-
-    /// @notice set the trusted forwarder
-    /// @param trustedForwarder address of the contract that is enabled to send meta-tx on behalf of the user
-    function setTrustedForwarder(address trustedForwarder) external onlyRole(DEFAULT_ADMIN_ROLE) {
-        _trustedForwarder = trustedForwarder;
     }
 
     /// @notice Function to permit the claiming of multiple tokens from multiple giveaways to a reserved address.
@@ -91,15 +81,6 @@ contract Claims is AccessControl, ClaimERC1155ERC721ERC20 {
         bytes calldata /*data*/
     ) external pure returns (bytes4) {
         return ERC721_RECEIVED;
-    }
-
-    function onERC721BatchReceived(
-        address, /*operator*/
-        address, /*from*/
-        uint256[] calldata, /*ids*/
-        bytes calldata /*data*/
-    ) external pure returns (bytes4) {
-        return ERC721_BATCH_RECEIVED;
     }
 
     function onERC1155Received(

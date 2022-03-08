@@ -12,6 +12,14 @@ export type MultiClaim = {
   salt?: string;
 };
 
+export type MultiClaimProof = MultiClaim & {proof: Array<string>};
+
+export type MultiClaimCalldata = {
+  root: string;
+  claim: MultiClaim;
+  proof: Array<string>;
+}
+
 export type ERC1155Claim = {
   ids: Array<string>;
   values: Array<number>;

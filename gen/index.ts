@@ -1,9 +1,6 @@
 /**
  * How to use:
- *  - yarn execute <NETWORK> ./setup/add_new_multi_giveaway.ts <GIVEAWAY_CONTRACT> <GIVEAWAY_NAME>
- *
- * GIVEAWAY_CONTRACT: from data/giveaways/multi_giveaway_1/detective_letty.json then the giveaway contract is: Multi_Giveaway_1
- * GIVEAWAY_NAME: from data/giveaways/multi_giveaway_1/detective_letty.json then the giveaway name is: detective_letty
+ *  - yarn gen <NETWORK> <CLAIM_NAME> <SALT>
  */
 import fs from 'fs-extra';
 
@@ -20,7 +17,7 @@ const func = async function () {
   let claimData: MultiClaim[];
   try {
     claimData = fs.readJSONSync(
-      `../data/${network}/${claimFile}_${salt}.json`
+      `../data/${network}/data/${claimFile}_${salt}.json`
     );
   } catch (e) {
     console.log('Error', e);
@@ -50,9 +47,9 @@ const func = async function () {
       proof: tree.getProof(calculateMultiClaimHash(claim)),
     });
   }
-  const basePath = `../data/multi-claim/${network}`;
-  const proofPath = `${basePath}/.multi_claims_proofs_${network}_${claimFile}.json`;
-  const rootHashPath = `${basePath}/.multi_claims_root_hash_${network}_${claimFile}.json`;
+  const basePath = `../data/${network}`;
+  const proofPath = `${basePath}/proof/${claimFile}_${salt}.json`;
+  const rootHashPath = `${basePath}/root/${claimFile}_${salt}.json`;
   fs.outputJSONSync(proofPath, claimsWithProofs);
   fs.outputFileSync(rootHashPath, merkleRootHash);
   console.log(`Proofs at: ${proofPath}`);

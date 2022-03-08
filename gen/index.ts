@@ -11,18 +11,16 @@ import {createClaimMerkleTree} from './helper/getClaims';
 import helpers, {MultiClaim} from './helper/merkleTreeHelper';
 const {calculateMultiClaimHash} = helpers;
 
-const args = process.argv.slice(2);
+const args      = process.argv.slice(2);
+const network   = args[0];
 const claimFile = args[1];
+const salt      = args[2];
 
 const func = async function () {
-  const {deployments, network, getChainId} = hre;
-  const {execute, read, catchUnknownSigner} = deployments;
-  const chainId = await getChainId();
-
   let claimData: MultiClaim[];
   try {
     claimData = fs.readJSONSync(
-      `data/giveaways/${claimFile}.json`
+      `../data/${network}/${claimFile}_${salt}.json`
     );
   } catch (e) {
     console.log('Error', e);
@@ -30,10 +28,8 @@ const func = async function () {
   }
 
   const {merkleRootHash, saltedClaims, tree} = createClaimMerkleTree(
-    network.live,
-    chainId,
     claimData,
-    claimContract
+    salt
   );
 
   const contractAddresses: string[] = [];
@@ -46,15 +42,6 @@ const func = async function () {
     claim.erc721.forEach((erc721) => addAddress(erc721.contractAddress));
     claim.erc20.contractAddresses.forEach((erc20) => addAddress(erc20));
   });
-  const allDeployments = Object.values(await deployments.all());
-  for (const contractAddress of contractAddresses) {
-    const deployment = allDeployments.find(
-      (d) => d.address.toLowerCase() === contractAddress
-    );
-    if (!deployment) {
-      console.warn(`Contract ${contractAddress} not found`);
-    }
-  }
 
   const claimsWithProofs: (MultiClaim & {proof: string[]})[] = [];
   for (const claim of saltedClaims) {
@@ -63,9 +50,9 @@ const func = async function () {
       proof: tree.getProof(calculateMultiClaimHash(claim)),
     });
   }
-  const basePath = `../data/multi-claim/${network.name}`;
-  const proofPath = `${basePath}/.multi_claims_proofs_${claimFile}_${chainId}.json`;
-  const rootHashPath = `${basePath}/.multi_claims_root_hash_${claimFile}_${chainId}.json`;
+  const basePath = `../data/multi-claim/${network}`;
+  const proofPath = `${basePath}/.multi_claims_proofs_${network}_${claimFile}.json`;
+  const rootHashPath = `${basePath}/.multi_claims_root_hash_${network}_${claimFile}.json`;
   fs.outputJSONSync(proofPath, claimsWithProofs);
   fs.outputFileSync(rootHashPath, merkleRootHash);
   console.log(`Proofs at: ${proofPath}`);

@@ -41,6 +41,7 @@ const func = async function () {
     'tuple(address to, tuple(uint256[] ids, uint256[] values, address contractAddress)[] erc1155, tuple(uint256[] ids, address contractAddress)[] erc721, tuple(uint256[] amounts, address[] contractAddresses) erc20, bytes32 salt)'
   );
   types.push('bytes32[] proof');
+  // 0x25839ca7
   // claimMultipleTokens(bytes32,(address,(uint256[],uint256[],address)[],(uint256[],address)[],(uint256[],address[]),bytes32),bytes32[])
   for (const proof of proofs) {
     if(proof.to == to) {
@@ -57,7 +58,6 @@ const func = async function () {
         claim: claim,
         proof: proof.proof
       }
-      console.log(types)
       values.push(value.root);
       values.push(value.claim);
       values.push(value.proof)

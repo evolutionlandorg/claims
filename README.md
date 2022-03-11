@@ -38,7 +38,7 @@ JSON format:
 ```
 
 Save your script (if you had to create one) in the repos and add the link to it in the first paragraph of the _Claims Template_ file.
-Save also your JSON file in the _data/<network>/<claim_name>_salt_ folder.
+Save also your JSON file in the `data/<network>/<claim_name>_salt` folder.
 
 Note:
 - we use the strictly unique incremental ID for `salt`.
@@ -54,8 +54,8 @@ example:
 
 `yarn gen mumbai test 1`
 
-After the script execution, proof locate at _data/<network>/proof/<claim_name>_salt_
-and merkle root locate at _data/<network>/root/<claim_name>_salt_
+After the script execution, proof locate at `data/<network>/proof/<claim_name>_salt`
+and merkle root locate at `data/<network>/root/<claim_name>_salt`
 
 ### Add merkle root to claims contract
 

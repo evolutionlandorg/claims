@@ -1,3 +1,11 @@
+# Claims
+
+# How to prepare a claim
+
+## Generating JSON file with every asset and associated data
+
+You have to use (or create) a script using the graph or other data source depending on the context, to create a JSON file containing asset IDs and amounts.
+
 JSON format:
 
 ```json
@@ -28,3 +36,27 @@ JSON format:
   }
 ]
 ```
+
+Save your script (if you had to create one) in the repos and add the link to it in the first paragraph of the _Claims Template_ file.
+Save also your JSON file in the _data/<network>/<claim_name>_salt_ folder.
+
+Note:
+- we use the strictly unique incremental ID for `salt`.
+- `to` should be unique in the same json.
+
+## Execute script to gen merkle root and proofs
+
+### Generate merkle root and proofs
+
+`yarn gen <network> <claim_name> <salt>`
+
+example:
+
+`yarn gen mumbai test 1`
+
+After the script execution, proof locate at _data/<network>/proof/<claim_name>_salt_
+and merkle root locate at _data/<network>/root/<claim_name>_salt_
+
+### Add merkle root to claims contract
+
+### Verify the proof to ensure the root is right

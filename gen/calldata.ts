@@ -63,7 +63,7 @@ const func = async function () {
       values.push(value.proof)
       console.log(values)
       const calldata = defaultAbiCoder.encode(types, values)
-      console.log(calldata)
+      console.log(utils.hexConcat(["0x25839ca7", calldata]))
     }
   }
 

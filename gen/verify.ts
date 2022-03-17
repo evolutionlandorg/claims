@@ -63,7 +63,8 @@ const func = async function () {
     values.push(value.root);
     values.push(value.claim);
     values.push(value.proof);
-    const calldata = defaultAbiCoder.encode(types, values);
+    let calldata = defaultAbiCoder.encode(types, values);
+    calldata = utils.hexConcat(["0x25839ca7", calldata])
     verify[proof.to] = calldata;
   }
 

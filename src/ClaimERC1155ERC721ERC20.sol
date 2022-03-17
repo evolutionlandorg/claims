@@ -4,7 +4,7 @@ pragma solidity ^0.8.11;
 import "openzeppelin-solidity/contracts/token/ERC1155/IERC1155.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/utils/SafeERC20.sol";
-import "openzeppelin-solidity/contracts/token/ERC721/IERC721.sol";
+import "./interfaces/IERC721Extended.sol";
 import "./Verify.sol";
 
 contract ClaimERC1155ERC721ERC20 {
@@ -116,10 +116,7 @@ contract ClaimERC1155ERC721ERC20 {
         address contractAddress
     ) private {
         require(contractAddress != address(0), "CLAIM_INVALID_CONTRACT_ZERO_ADDRESS");
-        for(uint256 i = 0; i < ids.length; i ++) {
-            uint256 id = ids[i];
-            IERC721(contractAddress).safeTransferFrom(address(this), to, id);
-        }
+        IERC721Extended(contractAddress).batchTransferFrom(address(this), to, ids);
     }
 
     /// @dev Private function used to transfer the ERC20 tokens specified in a specific claim.

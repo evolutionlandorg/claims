@@ -41,11 +41,17 @@ const func = async function () {
   });
 
   const claimsWithProofs: (MultiClaim & {proof: string[]})[] = [];
+  let tos: any = {};
   for (const claim of saltedClaims) {
-    claimsWithProofs.push({
-      ...claim,
-      proof: tree.getProof(calculateMultiClaimHash(claim)),
-    });
+    if (!tos[claim.to]) {
+      claimsWithProofs.push({
+        ...claim,
+        proof: tree.getProof(calculateMultiClaimHash(claim)),
+      });
+      tos[claim.to] = true;
+    } else {
+      throw new Error(`Repeated To: ${claim.to}`);
+    }
   }
   const basePath = `../data/${network}`;
   const proofPath = `${basePath}/proof/${claimFile}_${salt}.json`;

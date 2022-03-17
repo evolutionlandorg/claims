@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "gen": "ts-node index",
+    "verify": "ts-node verify",
     "calldata": "ts-node calldata"
   },
   "devDependencies": {

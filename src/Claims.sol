@@ -17,8 +17,8 @@ contract Claims is Initializable, AccessControl, ClaimERC1155ERC721ERC20 {
 
     event NewGiveaway(bytes32 merkleRoot, uint256 expiryTime);
 
-    function initialize() public initializer {
-        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
+    function initialize(address admin) public initializer {
+        _setupRole(DEFAULT_ADMIN_ROLE, admin);
     }
 
     /// @notice Function to add a new giveaway.

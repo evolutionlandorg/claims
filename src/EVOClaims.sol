@@ -14,16 +14,11 @@ contract EVOClaims is Initializable, AccessControl, EVOClaimERC1155ERC721ERC20 {
 
     mapping(address => mapping(bytes32 => bool)) public claimed;
     mapping(bytes32 => uint256) internal _expiryTime;
-    bytes32[] public allRoots;
 
     event NewGiveaway(bytes32 merkleRoot, uint256 expiryTime);
 
     function initialize(address admin) public initializer {
         _setupRole(DEFAULT_ADMIN_ROLE, admin);
-    }
-
-    function allRootsLength() external view returns (uint) {
-        return allRoots.length;
     }
 
     function getExpiryTime(bytes32 merkleRoot) external view returns (uint) {

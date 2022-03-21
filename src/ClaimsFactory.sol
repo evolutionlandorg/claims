@@ -10,14 +10,9 @@ contract ClaimsFactory {
     address public setter;
 
     mapping(bytes32 => address) public orgOf;
-    bytes32[] public allOrgs;
 
     constructor() {
         setter = msg.sender;
-    }
-
-    function allOrgsLength() public view returns (uint) {
-        return allOrgs.length;
     }
 
     function setSetter(address _setter) public {
@@ -40,7 +35,6 @@ contract ClaimsFactory {
     function _add(bytes32 org, address claims) internal {
         require(orgOf[org] == address(0), "EXISTS");
         orgOf[org] = claims;
-        allOrgs.push(org);
         emit Register(org, claims);
     }
 }

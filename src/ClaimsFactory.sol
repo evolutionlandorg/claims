@@ -16,6 +16,10 @@ contract ClaimsFactory {
         setter = msg.sender;
     }
 
+    function allOrgsLength() public view returns (uint) {
+        return allOrgs.length;
+    }
+
     function setSetter(address _setter) public {
         require(msg.sender == setter, "FORBIDDEN");
         setter = _setter;

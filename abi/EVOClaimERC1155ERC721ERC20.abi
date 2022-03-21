@@ -1,0 +1,80 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "values",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "address",
+            "name": "contractAddress",
+            "type": "address"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct EVOClaimERC1155ERC721ERC20.ERC1155Claim[]",
+        "name": "erc1155",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "address",
+            "name": "contractAddress",
+            "type": "address"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct EVOClaimERC1155ERC721ERC20.ERC721Claim[]",
+        "name": "erc721",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "contractAddresses",
+            "type": "address[]"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct EVOClaimERC1155ERC721ERC20.ERC20Claim",
+        "name": "erc20",
+        "type": "tuple"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "merkleRoot",
+        "type": "bytes32"
+      }
+    ],
+    "name": "ClaimedMultipleTokens",
+    "type": "event"
+  }
+]

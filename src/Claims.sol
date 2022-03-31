@@ -2,12 +2,11 @@
 pragma solidity ^0.8.11;
 
 import "openzeppelin-solidity/contracts/access/AccessControl.sol";
-import "openzeppelin-solidity/contracts/proxy/utils/Initializable.sol";
 import "./ClaimERC1155ERC721ERC20.sol";
 
 /// @title A Multi Claim contract that enables claims of user rewards in the form of ERC1155, ERC721 and / or ERC20 tokens
 /// @notice This contract manages claims for multiple token types
-contract Claims is Initializable, AccessControl, ClaimERC1155ERC721ERC20 {
+contract Claims is AccessControl, ClaimERC1155ERC721ERC20 {
     bytes4 private constant ERC1155_RECEIVED = 0xf23a6e61;
     bytes4 private constant ERC1155_BATCH_RECEIVED = 0xbc197c81;
     bytes4 private constant ERC721_RECEIVED = 0x150b7a02;
@@ -17,7 +16,7 @@ contract Claims is Initializable, AccessControl, ClaimERC1155ERC721ERC20 {
 
     event NewGiveaway(bytes32 merkleRoot, uint256 expiryTime);
 
-    function initialize(address admin) public initializer {
+    constructor(address admin) {
         _setupRole(DEFAULT_ADMIN_ROLE, admin);
     }
 

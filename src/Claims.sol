@@ -16,8 +16,8 @@ contract Claims is AccessControl, ClaimERC1155ERC721ERC20 {
 
     event NewGiveaway(bytes32 merkleRoot, uint256 expiryTime);
 
-    constructor(address admin) {
-        _setupRole(DEFAULT_ADMIN_ROLE, admin);
+    constructor() {
+        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
 
     function getExpiryTime(bytes32 merkleRoot) external view returns (uint) {

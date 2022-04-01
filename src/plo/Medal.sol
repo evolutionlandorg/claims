@@ -14,6 +14,8 @@ contract Medal is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable,
 
     Counters.Counter private _tokenIdCounter;
 
+    string public baseURI;
+
     constructor() ERC721("Darwinia PLO Medal", "MEDAL") {}
 
     function pause() public onlyOwner {
@@ -62,4 +64,17 @@ contract Medal is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable,
     {
         return super.supportsInterface(interfaceId);
     }
+
+    function _baseURI() internal view override returns (string memory) {
+        return baseURI;
+    }
+
+    function setBaseURI(string memory newbaseURI) public onlyOwner {
+        baseURI = newbaseURI;
+    }
+
+    function setTokenURI(uint256 tokenId, string memory uri) public onlyOwner {
+        _setTokenURI(tokenId, uri);
+    }
+
 }

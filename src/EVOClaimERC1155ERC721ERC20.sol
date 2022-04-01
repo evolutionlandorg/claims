@@ -132,7 +132,7 @@ contract EVOClaimERC1155ERC721ERC20 {
             address erc20ContractAddress = contractAddresses[i];
             uint256 erc20Amount = amounts[i];
             require(erc20ContractAddress != address(0), "CLAIM_INVALID_CONTRACT_ZERO_ADDRESS");
-            IERC20(erc20ContractAddress).safeTransferFrom(address(this), to, erc20Amount);
+            IERC20(erc20ContractAddress).safeTransfer(to, erc20Amount);
         }
     }
 }

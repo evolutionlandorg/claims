@@ -77,4 +77,13 @@ contract Medal is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable,
         _setTokenURI(tokenId, uri);
     }
 
+    function batchTransferFrom(
+        address from,
+        address to,
+        uint256[] ids
+    ) external {
+        for (uint256 i = 0; i < ids.length; ++i) {
+            transferFrom(from, to, ids[i]);
+        }
+    }
 }

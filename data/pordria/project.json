@@ -2,15 +2,23 @@
   "name": "Evolution Land",
   "timestamp": "2022-04-01T00:00:00.000Z",
   "version": { "major": 1, "minor": 0, "patch": 1 },
-  "logoURI": "https://www.evolution.land/favicon.png",
+  "logoURI": "https://portal.evolution.land/logo192.png",
   "events": [
     {
       "chainId": 44,
       "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
       "name": "Columbus Celebration III",
       "detail":"https://medium.com/@evolutionland/columbus-has-arrived-8e53eb06688a",
-      "logoURI": "https://www.evolution.land/favicon.png",
+      "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/columbus_celebration_III_4.json"
+    },
+    {
+      "chainId": 44,
+      "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
+      "name": "PLO Rewards",
+      "detail":"https://twitter.com/Evolution_Land/status/1509713096549748738",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/plo_3.json"
     }
   ]
 }

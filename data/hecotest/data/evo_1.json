@@ -1,0 +1,14 @@
+[
+  {
+    "to": "0xAfFb6A90135B416C2DFE6e790185B42B445296EA",
+    "erc1155": [],
+    "erc721": [{
+      "contractAddress": "0xaF15b630fF7122aB811533448a0e99A0EF931E6A",
+      "ids": ["0", "1", "2"]
+    }],
+    "erc20": {
+      "contractAddresses": [],
+      "amounts": []
+    }
+  }
+]

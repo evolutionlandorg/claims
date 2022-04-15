@@ -19,6 +19,14 @@
       "detail":"https://twitter.com/Evolution_Land/status/1509713096549748738",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/plo_3.json"
+    },
+    {
+      "chainId": 44,
+      "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
+      "name": "Columbus Pack",
+      "detail":"https://opensea.io/collection/evolution-land-columbus",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/opensea_auction_5.json"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "name": "Evolution Land",
   "timestamp": "2022-04-01T00:00:00.000Z",
-  "version": { "major": 1, "minor": 0, "patch": 1 },
+  "version": { "major": 1, "minor": 1, "patch": 1 },
   "logoURI": "https://portal.evolution.land/logo192.png",
   "events": [
     {

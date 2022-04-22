@@ -1,7 +1,7 @@
 {
   "name": "Evolution Land",
   "timestamp": "2022-04-01T00:00:00.000Z",
-  "version": { "major": 1, "minor": 1, "patch": 1 },
+  "version": { "major": 1, "minor": 2, "patch": 1 },
   "logoURI": "https://portal.evolution.land/logo192.png",
   "events": [
     {
@@ -27,6 +27,14 @@
       "detail":"https://opensea.io/collection/evolution-land-columbus",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/opensea_auction_5.json"
+    },
+    {
+      "chainId": 44,
+      "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
+      "name": "Gold Rush",
+      "detail":"https://www.evolution.land/goldrush",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/gold_rush_I_6.json"
     }
   ]
 }

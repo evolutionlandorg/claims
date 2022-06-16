@@ -1,7 +1,7 @@
 {
   "name": "Evolution Land Columbus",
   "timestamp": "2022-04-01T00:00:00.000Z",
-  "version": { "major": 1, "minor": 5, "patch": 2 },
+  "version": { "major": 1, "minor": 6, "patch": 2 },
   "logoURI": "https://portal.evolution.land/logo192.png",
   "events": [
     {
@@ -59,6 +59,14 @@
       "detail":"https://www.reddit.com/r/EvolutionLand/comments/uvpky8/1_evolution_land_grant_criptomaczams_contribution/",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/grant1_9.json"
+    },
+    {
+      "chainId": 44,
+      "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
+      "name": "Evolution Land X GAMI AMA",
+      "detail":"-",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/gami_11.json"
     }
   ]
 }

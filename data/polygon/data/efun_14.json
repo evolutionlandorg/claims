@@ -1,0 +1,28 @@
+[
+    {
+        "erc1155":[],
+        "erc20":{
+            "amounts":[
+                "100000000000000000000"
+            ],
+            "contractAddresses":[
+                "0x9C1C23E60B72Bc88a043bf64aFdb16A02540Ae8f"
+            ]
+        },
+        "erc721":[],
+        "to":"0x554f555c0c9EAe0a329C4cd736035fB91b9a80D8"
+    },
+    {
+        "erc1155":[],
+        "erc20":{
+            "amounts":[
+                "100000000000000000000"
+            ],
+            "contractAddresses":[
+                "0x9C1C23E60B72Bc88a043bf64aFdb16A02540Ae8f"
+            ]
+        },
+        "erc721":[],
+        "to":"0xD81C00315302A1f061C0a3332EEB13B56d9961a6"
+    }
+]

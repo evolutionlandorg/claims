@@ -1,0 +1,15 @@
+[
+    {
+        "erc1155":[],
+        "erc20":{
+            "amounts":[
+                "40000000000000"
+            ],
+            "contractAddresses":[
+                "0x7399Ea6C9d35124d893B8d9808930e9d3F211501"
+            ]
+        },
+        "erc721":[],
+        "to":"0x3AAb6779d50181CE73a1fe5b2f545A09eB70EEC8"
+    }
+]

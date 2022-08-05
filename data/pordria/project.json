@@ -80,7 +80,7 @@
       "chainId": 44,
       "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
       "name": "CriptoMacZam's Grant",
-      "detail":"-",
+      "detail":"https://snapshot.org/#/evolutionlandcolumbus.eth/proposal/0x8652aae15228a6ad749ae1c0d9e2e645dc11eda2e3a17cfb9034c6bdd10af68f",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/grant_18.json"
     },
@@ -88,7 +88,7 @@
       "chainId": 44,
       "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
       "name": "Bruno's Grant",
-      "detail":"-",
+      "detail":"https://snapshot.org/#/evolutionlandcolumbus.eth/proposal/0x6e9446717c3b3ce8c483448684b25a9ac7ad6ece1171d73d61cc34d181a5fbe2",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/grant_19.json"
     }

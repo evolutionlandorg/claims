@@ -91,6 +91,14 @@
       "detail":"https://snapshot.org/#/evolutionlandcolumbus.eth/proposal/0x6e9446717c3b3ce8c483448684b25a9ac7ad6ece1171d73d61cc34d181a5fbe2",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/grant_19.json"
+    },
+    {
+      "chainId": 44,
+      "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
+      "name": "July Dework Rewards",
+      "detail":"https://app.dework.xyz/evolution-land-dao",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/dework_20.json"
     }
   ]
 }

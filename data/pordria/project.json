@@ -1,7 +1,7 @@
 {
   "name": "Evolution Land Columbus",
   "timestamp": "2022-04-01T00:00:00.000Z",
-  "version": { "major": 1, "minor": 9, "patch": 3 },
+  "version": { "major": 1, "minor": 10, "patch": 3 },
   "logoURI": "https://portal.evolution.land/logo192.png",
   "events": [
     {

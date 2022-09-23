@@ -51,6 +51,14 @@
       "detail":"https://twitter.com/0xPolygonChina/status/1540362235830476801?s=20&t=T9RaTz72tQEbD0LMkRgwgw",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_25.json"
+    },
+    {
+      "chainId": 137,
+      "address": "0x88ef3F93fef54Dc5d99733d08696746565A95eD7",
+      "name": "EVOLUTION LAND & CCTIP PARTNERSHIP",
+      "detail":"http://t.cwallet.com/0eKS",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_27.json"
     }
   ]
 }

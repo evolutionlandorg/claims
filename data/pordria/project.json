@@ -115,6 +115,14 @@
       "detail":"https://app.dework.xyz/evolution-land-dao",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/sep_28.json"
+    },
+    {
+      "chainId": 44,
+      "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
+      "name": "Reddit Discussion Rewards",
+      "detail":"https://www.reddit.com/r/EvolutionLand/comments/xj0974/if_you_were_the_product_manager_of_evolution_land/",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/reddit_29.json"
     }
   ]
 }

@@ -59,6 +59,14 @@
       "detail":"http://t.cwallet.com/0eKS",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_27.json"
+    },
+    {
+      "chainId": 137,
+      "address": "0x88ef3F93fef54Dc5d99733d08696746565A95eD7",
+      "name": "Winner list with Sabai",
+      "detail":"https://twitter.com/sabaiecoverse/status/1580897918412001281?s=20&t=GezycL4PkrEUcu8W7xO3hg",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_30.json"
     }
   ]
 }

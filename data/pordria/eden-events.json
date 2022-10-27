@@ -1,7 +1,7 @@
 {
   "name": "Evolution Land Eden",
   "timestamp": "2022-06-08T00:00:00.000Z",
-  "version": { "major": 1, "minor": 5, "patch": 0 },
+  "version": { "major": 1, "minor": 6, "patch": 0 },
   "logoURI": "https://portal.evolution.land/logo192.png",
   "events": [
     {
@@ -67,6 +67,14 @@
       "detail":"https://twitter.com/sabaiecoverse/status/1580897918412001281?s=20&t=GezycL4PkrEUcu8W7xO3hg",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_30.json"
+    },
+    {
+      "chainId": 137,
+      "address": "0x88ef3F93fef54Dc5d99733d08696746565A95eD7",
+      "name": "Promotion Contributor Project",
+      "detail":"https://app.dework.xyz/evolution-land-dao/promotion-contributo?taskId=12d337d8-e235-459e-b192-083f6e62382f",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_31.json"
     }
   ]
 }

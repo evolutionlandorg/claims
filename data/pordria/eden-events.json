@@ -1,7 +1,7 @@
 {
   "name": "Evolution Land Eden",
   "timestamp": "2022-06-08T00:00:00.000Z",
-  "version": { "major": 1, "minor": 6, "patch": 0 },
+  "version": { "major": 1, "minor": 7, "patch": 0 },
   "logoURI": "https://portal.evolution.land/logo192.png",
   "events": [
     {
@@ -75,6 +75,22 @@
       "detail":"https://app.dework.xyz/evolution-land-dao/promotion-contributo?taskId=12d337d8-e235-459e-b192-083f6e62382f",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_31.json"
+    },
+    {
+      "chainId": 137,
+      "address": "0x88ef3F93fef54Dc5d99733d08696746565A95eD7",
+      "name": "Giveaway with SAIBAI",
+      "detail":"http://t.cwallet.com/EZEy",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_33.json"
+    },
+    {
+      "chainId": 137,
+      "address": "0x88ef3F93fef54Dc5d99733d08696746565A95eD7",
+      "name": "Winner list with cryptomeda",
+      "detail":"https://docs.google.com/document/d/1WuMTBcfT_wDJv0CJ6nV-s2X8aLAFnjdENt8Vxl2DwKM/edit#",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_34.json"
     }
   ]
 }

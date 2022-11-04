@@ -131,6 +131,14 @@
       "detail":"https://app.dework.xyz/evolution-land-dao/community-46",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/crab_35.json"
+    },
+    {
+      "chainId": 44,
+      "address": "0x0D6F9bdF7aDB1FC13654a1281DCe12F212068076",
+      "name": "halloween meme contest",
+      "detail":"https://twitter.com/Evolution_Land/status/1585844189849272322?s=20",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/crab/proof/crab_36.json"
     }
   ]
 }

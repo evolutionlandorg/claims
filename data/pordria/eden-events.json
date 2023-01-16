@@ -1,7 +1,7 @@
 {
   "name": "Evolution Land Eden",
   "timestamp": "2022-06-08T00:00:00.000Z",
-  "version": { "major": 1, "minor": 8, "patch": 0 },
+  "version": { "major": 1, "minor": 9, "patch": 0 },
   "logoURI": "https://portal.evolution.land/logo192.png",
   "events": [
     {
@@ -99,6 +99,14 @@
       "detail":"https://app.dework.xyz/evolution-land-dao/community-46",
       "logoURI": "https://portal.evolution.land/logo192.png",
       "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_38.json"
+    },
+    {
+      "chainId": 137,
+      "address": "0x88ef3F93fef54Dc5d99733d08696746565A95eD7",
+      "name": "DEC|Community Management",
+      "detail":"https://app.dework.xyz/evolution-land-dao/community-46?taskId=ff897196-2323-43b5-a0e4-9f80dfe4ada0",
+      "logoURI": "https://portal.evolution.land/logo192.png",
+      "proofURI": "https://raw.githubusercontent.com/evolutionlandorg/claims/main/data/polygon/proof/polygon_40.json"
     }
   ]
 }
